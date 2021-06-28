@@ -1,10 +1,12 @@
 # oVirt installation and setup
 
+<!--- cSpell:ignore passwordless OOMY hyperconverged vdsm firewalld -->
+
 ## Install oVirt node
 
 - download ISO
-- flash to USB memorystick
-- Boot from memorystick
+- flash to USB memory stick
+- Boot from memory stick
 
 ## Run oVirt setup wizard
 
@@ -22,7 +24,7 @@
 7. (optional) If you want to configure NTP time synchronisation, revisit the **Time & Date** section and configure the NTP server to a local server then enable NTP
 8. Select **Begin Installation** to start the installation
 9. Wait for installation to complete then select to reboot when selected (ensure the USB memory stick is removed so it doesn't boot from the install media)
-10.  You can now interract with the installed system using the web based cockpit UI.  On your laptop or a workstation on the network, navigate to ```https://<host address>:9090```.  Where the host address is the address you added in DNS for the IP address you manually configured in step 6 above.
+10. You can now interact with the installed system using the web based cockpit UI.  On your laptop or a workstation on the network, navigate to ```https://<host address>:9090```.  Where the host address is the address you added in DNS for the IP address you manually configured in step 6 above.
 
 ## Setup ssh keys
 
@@ -37,7 +39,7 @@ ssh-keygen
 ssh-copy-id root@<host-address>
 ```
 
-you will be prompted to confirm the connection, answer **yes** then you will be prompted for the root password, which you enteres in step 4 of the previous section.
+you will be prompted to confirm the connection, answer **yes** then you will be prompted for the root password, which you entered in step 4 of the previous section.
 
 ## Configure LVM filter
 
