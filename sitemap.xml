@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://binnes.github.io/homeLab/overview/</loc>
+         <lastmod>2021-06-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://binnes.github.io/homeLab/ovirt/</loc>
          <lastmod>2021-06-28</lastmod>
          <changefreq>daily</changefreq>
