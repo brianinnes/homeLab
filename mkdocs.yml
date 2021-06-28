@@ -47,5 +47,6 @@ extra:
 copyright: Copyright © 2021 Brian Innes
 nav:
   - Home: index.md
+  - Overview: overview.md
   - Preparing: preparation.md
   - oVirt setup: ovirt.md

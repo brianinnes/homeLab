@@ -1,11 +1,13 @@
 [filtering]
 checkextern=1
 ignore=
-  ^https://github.com/binnes/homeLab/edit
+  ^https://github.com/binnes/homeLab
+  ^https://binnes.github.io/homeLab
   xml.gz$
   ^https://ccp-ui.csplab.intranet.ibm.com
   ^https://ccp-ui.apps.labprod.ocp.csplab.local
   public/404.html$
+  public/sitemap.xml$
   fonts.gstatic.com
 
 [checking]
