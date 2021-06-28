@@ -1,11 +1,11 @@
 [filtering]
 checkextern=1
 ignore=
-  ^https://cloudnativetoolkit.dev
-  ^https://github.com/cloud-native-toolkit/developer-guide/edit
+  ^https://github.com/binnes/homeLab/edit
   xml.gz$
   ^https://ccp-ui.csplab.intranet.ibm.com
   ^https://ccp-ui.apps.labprod.ocp.csplab.local
+  public/404.html$
   fonts.gstatic.com
 
 [checking]
