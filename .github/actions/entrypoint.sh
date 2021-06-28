@@ -7,4 +7,6 @@ pip --no-cache-dir install git+https://github.com/linkchecker/linkchecker@v10.0.
 # NodeJS Dependencies
 npm ci
 
+chmod +x build.sh
+
 npm run build
