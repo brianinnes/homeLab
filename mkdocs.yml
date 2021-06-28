@@ -1,0 +1,51 @@
+site_name: Home Lab
+site_description: >-
+  How to create your own home or office Lab environment to explore Red Hat OpenShift using oVirt and OKD
+site_url: https://binnes.github.io/homeLab
+site_author: Brian Innes
+repo_name: ""
+repo_url: https://github.com/binnes/homeLab
+docs_dir: docs
+site_dir: public
+edit_uri: edit/main/docs
+theme:
+    name: material
+    logo: images/BrianLogo.png
+    favicon: images/BrianLogo.png
+    palette:
+      scheme: brian
+      primary: brian blue
+      accent: brian light green
+    font:
+      text: Roboto
+      code: Roboto Mono
+    language: en
+    custom_dir: overrides
+    features:
+      - navigation.instant
+      - navigation.tracking
+use_directory_urls: true
+plugins:
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+markdown_extensions:
+  - attr_list
+  - admonition
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - pymdownx.details
+extra_css:
+    - css/extra.css
+extra:
+  generator: false
+copyright: Copyright © 2021 Brian Innes
+nav:
+  - Home: index.md
+  - Preparing: preparation.md
+  - oVirt setup: ovirt.md
