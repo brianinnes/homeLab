@@ -1,3 +1,4 @@
 *.code-workspace
 *.ai
 /public
+/node_modules
