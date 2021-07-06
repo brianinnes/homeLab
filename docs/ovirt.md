@@ -26,6 +26,10 @@
 9. Wait for installation to complete then select to reboot when selected (ensure the USB memory stick is removed so it doesn't boot from the install media)
 10. You can now interact with the installed system using the web based cockpit UI.  On your laptop or a workstation on the network, navigate to ```https://<host address>:9090```.  Where the host address is the address you added in DNS for the IP address you manually configured in step 6 above.
 
+## (Optional) Create partition for Gluster filesystem
+
+If you are using a disk partition for the Gluster FS, then you need to create the partition.  In the cockpit UI, navigate to the **Storage** section.  Select the disk where the partition will live from the side panel.  This will show the partitions in the Content section.  Next to the unallocated space there is a **Create partition** button.  Click the button to create a partition.  Set the required size and select **No filesystem** as the type then click **Create partition**  to create the partition.
+
 ## Setup ssh keys
 
 During the install the ansible scripts need to be able to execute commands on the host.  To do this it uses passwordless ssh.  Even though we are only using a single host, the scripts are written to work across multiple hosts, so we need to enable passwordless ssh.
@@ -71,8 +75,8 @@ Select the **Run Gluster Wizard for Single Node** option to start the install.
 
 1. Enter the Fully qualified hostname for the oVirt cluster (this should be the name of the oVirt node that was used during the ```ssh-copy-id``` command)
 2. You can leave the Packages options as default
-3. You can leave the Volumes options as default
-4. In the Bricks options, set the device to the device you have available for the gluster storage.  This could be an entire disk (e.g. /dev/sdb), or an available disk partition (/dev/sda3)
+3. You can leave the Volumes options as default.  However, if you have a small amount of storage you may want to delete 2 of the 3 default volumes, so all available storage will be in a single volume.
+4. In the Bricks options, set the device to the device you have available for the gluster storage for all the configured volumes.  This could be an entire disk (e.g. /dev/sdb), or an available disk partition (/dev/sda3)
 5. In the review section edit the summary and remove the line ```- 5900/tcp```, as this will cause the scripts to fail. Save the script
 6. Select the Deploy button to start the Gluster Storage installation
 
@@ -118,6 +122,7 @@ The Hosted Engine will try to add port 6900 to the public zone and will fail as 
     ```
 
     You can see the port range 5900-6923 has been split into 2 ranges avoiding port 6900
+
 5. run command ```systemctl restart firewalld``` to make the new firewall configuration live
 
 close the browser window and return to the browser window waiting to install the Hosted Engine
