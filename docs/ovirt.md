@@ -1,6 +1,6 @@
 # oVirt installation and setup
 
-<!--- cSpell:ignore passwordless OOMY hyperconverged vdsm firewalld -->
+<!--- cSpell:ignore passwordless OOMY hyperconverged vdsm firewalld wipefs -->
 
 ## Install oVirt node
 
@@ -61,6 +61,9 @@ filter = ["a|^/dev/disk/by-id/lvm-pv-uuid-U77HZ9-LPry-OOMY-bgOq-t34w-l3av-srg8tU
 
 Save the modified lvm.conf file
 
+!!!Note
+    If you plan to use an entire disk for GlusterFS, then it is important that the disk is not partitioned, so if it has previously been used and has a partition table on it, then use the **Terminal** section of the cockpit interface to clear the device.  E.g. if you will be using the disk **/dev/sdb** for gluster, then wipe the disk using command ```wipefs -a -f /dev/sdb```.  This will erase the disk.
+
 ## Setup the hyperconverged oVirt Hosted Engine and Gluster storage
 
 The hyperconverged Hosted Engine and Gluster storage can be installed using the cockpit web console (```http://<host-address>:9090```).
@@ -92,14 +95,9 @@ Before continuing, right click on the **Networking** item in the side menu and o
 
 ### Modify the firewall rules
 
-The Hosted Engine will try to add port 6900 to the public zone and will fail as the **vdsm** service includes that port, so the vdsm service and an additional port range needs to be modified to remove port 6900
+The Hosted Engine will try to add port 6900 to the public zone and will fail as the port is already being exposed.  You need to modify the firewall config to ensure the automated deployment will work.
 
-1. Click to **Edit rules and zones**
-2. In the **Public zone** section open the **vdsm** item and press the delete button
-    ![vdsm service](./images/firewallConfig.png)
-3. Select the **Add Service** button within the public zone to Create a new service.  Select to use custom ports then enter TCP ports ```54321, 5900-6899, 6901-6923, 49152-49216```.  Call it **custom-vdsm**
-    ![new vdsm service](./images/addService.png)
-4. Switch to the terminal section and edit the file **/etc/firewalld/zones/public.xml** to have the following content:
+1. Switch to the terminal section and edit the file **/etc/firewalld/zones/public.xml** to have the following content:
 
     ```xml
     <zone>
@@ -123,11 +121,13 @@ The Hosted Engine will try to add port 6900 to the public zone and will fail as 
 
     You can see the port range 5900-6923 has been split into 2 ranges avoiding port 6900
 
-5. run command ```systemctl restart firewalld``` to make the new firewall configuration live
+2. run command ```systemctl restart firewalld``` to make the new firewall configuration live
 
 close the browser window and return to the browser window waiting to install the Hosted Engine
 
 ### Install the Hosted Engine
+
+Select to Deploy the Hosted Engine
 
 1. In the VM Settings section enter:
     - the fully qualified host name for the hosted engine
