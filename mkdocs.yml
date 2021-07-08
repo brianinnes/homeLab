@@ -50,4 +50,5 @@ nav:
   - Overview: overview.md
   - Preparing: preparation.md
   - oVirt setup: ovirt.md
+  - OKD install: okd_install.md
   - Resources: resources.md

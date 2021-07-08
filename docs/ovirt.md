@@ -91,11 +91,11 @@ You can now select the **Continue to Hosted Engine Deployment** button to instal
 
 ## Install Hosted Engine
 
-Before continuing, right click on the **Networking** item in the side menu and open a new browser window or tab.  The firewall ports need to be modified before running the Hosted Engine installation, otherwise the installation will fail.
+The Hosted Engine will try to add port 6900 to the public zone and will fail as the port is already being exposed.  Before installing the Hosted Engine you need to modify the firewall configuration.
 
 ### Modify the firewall rules
 
-The Hosted Engine will try to add port 6900 to the public zone and will fail as the port is already being exposed.  You need to modify the firewall config to ensure the automated deployment will work.
+You need to modify the firewall config to remove port 6900 to ensure the automated deployment will work.
 
 1. Switch to the terminal section and edit the file **/etc/firewalld/zones/public.xml** to have the following content:
 
@@ -121,9 +121,7 @@ The Hosted Engine will try to add port 6900 to the public zone and will fail as 
 
     You can see the port range 5900-6923 has been split into 2 ranges avoiding port 6900
 
-2. run command ```systemctl restart firewalld``` to make the new firewall configuration live
-
-close the browser window and return to the browser window waiting to install the Hosted Engine
+2. run command ```systemctl restart firewalld``` to make the new firewall configuration live.  You can now return to the Virtualization section of the Cockpit web console to continue with the Hosted Engine deployment.
 
 ### Install the Hosted Engine
 
