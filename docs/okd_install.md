@@ -10,7 +10,7 @@ To help with the installation here is a list of information you will need during
 
 | item   | description|
 |--------|------------|
-| Engine FQDN | This is the Fully Qualified Domain Name of the virtual engine.  This is the value you entered in step 1 in oVirt setup section [Install the Hosted Engine](./ovirt.md/#install-the-hosted-engine){: target=_blank} |
+| Engine FQDN | This is the Fully Qualified Domain Name of the virtual engine.  This is the value you entered in step 1 in oVirt setup section [Install the Hosted Engine](./ovirt.md#install-the-hosted-engine){: target=_blank} |
 | Engine user | This should be admin |
 | Engine password | This is the value entered at ovirt install time, and the password you use to access the ovirt admin console |
 | oVirt Cluster name | Should be **Default**.  This can be verified in the oVirt Administration console, select **Compute** from the side menu then **Clusters**.  By default there is a single cluster defined with **Default** as the name |
