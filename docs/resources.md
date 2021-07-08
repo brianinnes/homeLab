@@ -1,6 +1,6 @@
 # Additional Resources
 
-<!--- cSpell:ignore Brigoli -->
+<!--- cSpell:ignore Brigoli Josphat Mutal Oichman -->
 
 Below are some links and posts about OKD.  They may provide additional insight and options to help your OKD learning.
 

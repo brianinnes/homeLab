@@ -72,7 +72,7 @@ Complete the following steps to install OKD on your cluster
 ## Post install tasks
 
 !!!Info
-    If you are getting warnings that your cluster is unable to retrieve available updates because ```https://origin-release.svc.ci.openshift.org``` host cannot be found, then you have an out of date URL in the update service.  You can fix this by running the followin command as an admin user on the command line:
+    If you are getting warnings that your cluster is unable to retrieve available updates because ```https://origin-release.svc.ci.openshift.org``` host cannot be found, then you have an out of date URL in the update service.  You can fix this by running the following command as an admin user on the command line:
 
     ```text
     oc patch clusterversion/version --patch '{"spec":{"upstream":"https://amd64.origin.releases.ci.openshift.org/graph"}}' --type=merge
