@@ -1,6 +1,6 @@
 # OKD Install
 
-<!--- cSpell:ignore  ovirtmgmt Fzcwo openshift ully ualified omain mkdir -->
+<!--- cSpell:ignore  ovirtmgmt Fzcwo openshift ully ualified omain mkdir kubeadmin kubeconfig htpasswd -->
 
 When you have your oVirt environment up and running you can install OKD.
 
@@ -77,7 +77,7 @@ Now your cluster has been installed you want to be able to access it.  There are
 
 After installation your cluster web console should be accessible at the URL displayed when the openshift-install command completes.  The URL is  of the form ```https://console-openshift-console.apps.<cluster name>.<base domain>```.
 
-You can use the kubeadmin command, with the password displayed when the openshif-install command completed.  This is the temporary cluster admin account.  You should add an identity provider and create your own admin account.   Instructions to complete this task are provided below.
+You can use the kubeadmin command, with the password displayed when the openshift-install command completed.  This is the temporary cluster admin account.  You should add an identity provider and create your own admin account.   Instructions to complete this task are provided below.
 
 ### Command lined
 
@@ -87,7 +87,7 @@ Once you have the oc tool install you can connect to the cluster.  There are 2 w
 
 #### Connecting using the kubeconfig file
 
-During instalation a kubeconfig file was created.  This content needs to be kept safe, as it can be the only way o log in if the cluster has been shutdown for a while and certificates have expired.  It also provides an admin login.  To use the file set the environment variable KUBECONFIG to point to the config file.  The location was provided as part of the openshift-install completion message, such as :
+During installation a kubeconfig file was created.  This content needs to be kept safe, as it can be the only way o log in if the cluster has been shutdown for a while and certificates have expired.  It also provides an admin login.  To use the file set the environment variable KUBECONFIG to point to the config file.  The location was provided as part of the openshift-install completion message, such as :
 
 ```shell
 export KUBECONFIG=/Users/brian/projects/okd/4.7/install/auth/kubeconfig
@@ -97,7 +97,7 @@ you can now use the oc command and be connected as an administrator.
 
 #### Connect as a specific user
 
-You can specify a user on the command line.  Ensure the KUBECONFIG environent variable is not set, then login using:
+You can specify a user on the command line.  Ensure the KUBECONFIG environment variable is not set, then login using:
 
 ```shell
 oc login -u <user> --server=https://api.<cluster name>.<base domain>:6443
@@ -146,7 +146,7 @@ Once you have the users.htpasswd file created and populated with all the users y
 oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config
 ```
 
-#### Creatng itendity provider configuration
+#### Creating identity provider configuration
 
 You can now create the identity provider using command:
 
@@ -176,7 +176,7 @@ You can now create the identity provider using command:
 
 ### Creating an administrator account
 
-After adding the identity provider, you want to make one of the accounts added by the idntity provider and administrator user.  
+After adding the identity provider, you want to make one of the accounts added by the identity provider and administrator user.  
 
 Before proceeding you should log into the cluster from the Web Console, using the user account you want to make an admin user.
 
