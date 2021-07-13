@@ -176,7 +176,7 @@ You can now create the identity provider using command:
 
 ### Creating an administrator account
 
-After adding the identity provider, you want to make one of the accounts added by the identity provider and administrator user.  
+After adding the identity provider, you want to make one of the accounts added to the identity provider an administrator user.  
 
 Before proceeding you should log into the cluster from the Web Console, using the user account you want to make an admin user.
 
