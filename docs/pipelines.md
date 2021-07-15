@@ -17,4 +17,4 @@ kubectl apply -f https://raw.githubusercontent.com/tektoncd/operator/main/config
 
 ## Tekton Hub
 
-There is a [community hub](https://hub.tekton.dev/){: target=_blank} of operators available, which as the source of the content installed by the OpenShift Pipelines operator.  The hub allows you to search for tasks then provides the command to install the task to your cluster.
+There is a [community hub](https://hub.tekton.dev/){: target=_blank} of tasks available, which is the source of the content installed by the OpenShift Pipelines operator.  The hub allows you to search for tasks then provides the command to install the task to your cluster.
