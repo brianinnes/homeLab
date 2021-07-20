@@ -28,7 +28,10 @@ Complete the following steps to install OKD on your cluster
 
 ### Download the installer
 
-- To find the latest version of the OKD installer, visit the [releases](https://github.com/openshift/okd/releases){: target=_blank} page and download the latest openshift-install image for the platform where you plan to run the installer from (this is typically your local laptop, but could be a virtual machine you run on the ovirt cluster).  
+- To find the latest version of the OKD installer, visit the [releases](https://github.com/openshift/okd/releases){: target=_blank} page and download the latest openshift-install image for the platform where you plan to run the installer from (this is typically your local laptop, but could be a virtual machine you run on the ovirt cluster).
+
+Alternatively you can download one of the [nightly builds](https://amd64.origin.releases.ci.openshift.org){: target=_blank}.  These builds contain recent updates and fixes, but aren't an official release, so may contain unresolved issues.  Click on a build to get information about the build and also the command to download and unpack the build to your local system
+
 - Expand the downloaded archive to allow access to the openshift-install binary.
 
 ### Create the install config
