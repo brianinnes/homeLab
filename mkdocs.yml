@@ -51,7 +51,7 @@ nav:
   - Preparing: preparation.md
   - oVirt setup: ovirt.md
   - OKD install: okd_install.md
-  - All Development Environment:
+  - Development Environment:
     - Pipelines: pipelines.md
   - OKD Development:
     - Resources: okd_development.md
