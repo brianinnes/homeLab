@@ -67,7 +67,7 @@ Alternatively you can download one of the [nightly builds](https://amd64.origin.
     ```
 
 !!!Warning
-    It is important that you keep the install directory after the installation has finished, as if you ever shut your cluster down for a length of time, then the certificates used within the system may expire whilst the system is down.  The only way to access the cluster to renew the certificates is the the auth credentials contained within the install directory.  You also need the install directory if you want to uninstall the cluster.
+    It is important that you keep the install directory after the installation has finished, as if you ever shut your cluster down for a length of time, then the certificates used within the system may expire whilst the system is down.  The only way to access the cluster to renew the certificates is with the auth credentials contained within the install directory.  You also need the install directory if you want to uninstall the cluster.
 
 ## Connecting to the cluster
 
@@ -153,7 +153,7 @@ oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n op
 
 You can now create the identity provider using command:
 
-=== "Linux & Max OS"
+=== "Linux & Mac OS"
 
     ```shell
     cat <<EOF | kubectl apply -f -
