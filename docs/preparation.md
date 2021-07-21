@@ -25,7 +25,7 @@ There is also the option to not deploy a fault tolerant OKD cluster and reduce t
 ### Storage setup
 
 !!!ToDo
-  Complete this section
+    Complete this section
 
 - Storage
   - partition for Gluster
@@ -34,7 +34,7 @@ There is also the option to not deploy a fault tolerant OKD cluster and reduce t
 ## Network Requirements
 
 !!!Todo
-  Complete this section
+    Complete this section
 
 - IP Addresses and DNS resolution needed
   - oVirt host
