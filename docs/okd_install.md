@@ -49,7 +49,9 @@ Alternatively you can download one of the [nightly builds](https://amd64.origin.
     - input IP address allocated to OKD cluster Ingress
 
 !!!Warning
-    There is a [bug](https://bugzilla.redhat.com/show_bug.cgi?id=1984481){: target=_blank} in the OVNKubernetes network provider in OKD 4.7.  This prevents the install working without manual intervention and prevents the detection of external IP addresses causing the worker Machines being stuck in Provisioning phase.  A work around is to use the **OpenShiftSDN** network provider.  To do this change the install-config.yaml file created in the previous steps and change the **networkType** property from **OVNKubernetes** to **OpenShiftSDN**
+    There is a [bug](https://bugzilla.redhat.com/show_bug.cgi?id=1984481){: target=_blank} in the OVNKubernetes network provider in OKD 4.7.  This prevents the install working without manual intervention and prevents the detection of external IP addresses causing the worker Machines being stuck in Provisioning phase.  A work around is to use the **OpenShiftSDN** network provider.  
+
+    To do this change the **install-config.yaml** file created in the previous steps and change the **networkType** property from **OVNKubernetes** to **OpenShiftSDN**
 
 ### Run the installer
 
