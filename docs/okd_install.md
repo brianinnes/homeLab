@@ -32,7 +32,7 @@ Complete the following steps to install OKD on your cluster
 
 Alternatively you can download one of the [nightly builds](https://amd64.origin.releases.ci.openshift.org){: target=_blank}.  These builds contain recent updates and fixes, but aren't an official release, so may contain unresolved issues.  Click on a build to get information about the build and also the command to download and unpack the build to your local system
 
-- Expand the downloaded archive to allow access to the openshift-install binary.
+- Expand the downloaded archive to allow access to the openshift-install binary, e.g. ```tar zxvf openshift-install-mac-4.9.0-0.okd-2021-08-03-074139.tar.gz```
 
 ### Create the install config
 
