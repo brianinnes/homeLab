@@ -57,6 +57,27 @@ Alternatively you can download one of the [nightly builds](https://amd64.origin.
 
     To do this change the **install-config.yaml** file created in the previous steps and change the **networkType** property from **OVNKubernetes** to **OpenShiftSDN**
 
+!!!Warning
+    From OKD 4.8 the default install configuration now defines affinity groups.  If you do not have at least 3 physical oVirt hosts then you need to alter the install configuration to **not** enforce the affinity groups.
+
+    To do this in the **platform** section at the bottom of the **install-config.yaml** file, set the enforcing property to false for the affinity groups:
+
+    ```yaml
+    platform:
+        ovirt:
+            affinityGroups:
+            - description: AffinityGroup for spreading each compute machine to a different
+                host
+            enforcing: false
+            name: compute
+            priority: 3
+            - description: AffinityGroup for spreading each control plane machine to a different
+                host
+            enforcing: false
+            name: controlplane
+            priority: 5
+    ```
+
 ### Run the installer
 
 !!!Note
