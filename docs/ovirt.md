@@ -4,7 +4,7 @@
 
 ## Install oVirt node
 
-- download ISO
+- [download ISO](https://ovirt.org/download/){: target=_blank}.  You want the [oVirt Node](https://resources.ovirt.org/pub/ovirt-4.4/iso/ovirt-node-ng-installer/){: target=_blank} ISO.
 - flash to USB memory stick
 - Boot from memory stick
 
