@@ -1,6 +1,6 @@
 # OKD Install
 
-<!--- cSpell:ignore  ovirtmgmt Fzcwo openshift ully ualified omain mkdir kubeadmin kubeconfig htpasswd -->
+<!--- cSpell:ignore  ovirtmgmt Fzcwo openshift ully ualified omain mkdir kubeadmin kubeconfig htpasswd zxvf -->
 
 When you have your oVirt environment up and running you can install OKD.
 
