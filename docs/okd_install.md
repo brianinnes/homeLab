@@ -37,7 +37,8 @@ Alternatively you can download one of the [nightly builds](https://amd64.origin.
 ### Create the install config
 
 - Open a command or terminal window and switch to the directory containing the openshift-install binary
-- run command ```./openshift-install create install-config```
+- run command ```./openshift-install create install-config```, and enter the values when prompted - these are the values you prepared at the top of this page.
+
     - select oVirt as the Platform
     - enter the engine **F**ully **Q**ualified **D**omain **N**ame
     - accept the suggested engine username (admin@internal) by pressing enter
@@ -47,6 +48,9 @@ Alternatively you can download one of the [nightly builds](https://amd64.origin.
     - select the Network to use
     - input IP address allocated to OKD cluster API endpoint
     - input IP address allocated to OKD cluster Ingress
+    - input the base domain
+    - input the cluster name (forms the end of all URLs for cluster apps ```apps.<cluster name>.<basse domain>```)
+    - input the pull secret (either a valid Red Hat or the fake one provided above)
 
 !!!Warning
     There is a [bug](https://bugzilla.redhat.com/show_bug.cgi?id=1984481){: target=_blank} in the OVNKubernetes network provider in OKD 4.7.  This prevents the install working without manual intervention and prevents the detection of external IP addresses causing the worker Machines being stuck in Provisioning phase.  A work around is to use the **OpenShiftSDN** network provider.  
