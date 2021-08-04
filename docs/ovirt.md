@@ -47,6 +47,9 @@ you will be prompted to confirm the connection, answer **yes** then you will be 
 
 ## Configure LVM filter
 
+!!!Note
+    This step is only required in oVirt 4.4.6 and earlier - from 4.4.7 this is handled automatically by the installer
+
 By default Logical Volumes are configured to specific devices, so you need to add the device you want to use for the Gluster storage.
 
 Using the terminal section in the cockpit web ui, edit file **/etc/lvm/lvm.conf** and search for a line the starts **filter =**, not lines starting with **#** are comments.
@@ -76,11 +79,14 @@ Select the start button under Hyperconverged.
 
 Select the **Run Gluster Wizard for Single Node** option to start the install.
 
+!!!Note
+    Step 5 is only required in oVirt versions 4.4.6 and earlier, from 4.4.7 the installer works without needing to modify the generated config
+
 1. Enter the Fully qualified hostname for the oVirt cluster (this should be the name of the oVirt node that was used during the ```ssh-copy-id``` command)
 2. You can leave the Packages options as default
 3. You can leave the Volumes options as default.  However, if you have a small amount of storage you may want to delete 2 of the 3 default volumes, so all available storage will be in a single volume.
 4. In the Bricks options, set the device to the device you have available for the gluster storage for all the configured volumes.  This could be an entire disk (e.g. /dev/sdb), or an available disk partition (/dev/sda3)
-5. In the review section edit the summary and remove the line ```- 5900/tcp```, as this will cause the scripts to fail. Save the script
+5. *(only for earlier versions of oVirt)* In the review section edit the summary and remove the line ```- 5900/tcp```, as this will cause the scripts to fail. Save the script
 6. Select the Deploy button to start the Gluster Storage installation
 
 If all works you should see the screen confirming the Gluster installation was successful
@@ -94,6 +100,9 @@ You can now select the **Continue to Hosted Engine Deployment** button to instal
 The Hosted Engine will try to add port 6900 to the public zone and will fail as the port is already being exposed.  Before installing the Hosted Engine you need to modify the firewall configuration.
 
 ### Modify the firewall rules
+
+!!!Note
+    This step is only required for oVirt 4.4.6 and earlier versions,  From 4.7 the installer works without needing these modifications
 
 You need to modify the firewall config to remove port 6900 to ensure the automated deployment will work.
 
