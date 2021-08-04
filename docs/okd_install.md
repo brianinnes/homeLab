@@ -57,6 +57,18 @@ Alternatively you can download one of the [nightly builds](https://amd64.origin.
 
     To do this change the **install-config.yaml** file created in the previous steps and change the **networkType** property from **OVNKubernetes** to **OpenShiftSDN**
 
+    ```yaml
+    networking:
+        clusterNetwork:
+        - cidr: 10.128.0.0/14
+            hostPrefix: 23
+        machineNetwork:
+        - cidr: 10.0.0.0/16
+        networkType: OpenShiftSDN
+        serviceNetwork:
+        - 172.30.0.0/16
+    ```
+
 !!!Warning
     From OKD 4.8 the default install configuration now defines affinity groups.  If you do not have at least 3 physical oVirt hosts then you need to alter the install configuration to **not** enforce the affinity groups.
 
