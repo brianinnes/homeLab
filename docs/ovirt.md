@@ -4,7 +4,7 @@
 
 ## Install oVirt node
 
-- download ISO
+- [download ISO](https://www.ovirt.org){target=_blank} (ovirt node iso - 4.4.10-2022030308)
 - flash to USB memory stick
 - Boot from memory stick
 
@@ -95,6 +95,9 @@ The Hosted Engine will try to add port 6900 to the public zone and will fail as 
 
 ### Modify the firewall rules
 
+!!!Info
+    This step was needed in versions of ovirt before 4.4.9, but is no longer needed with 4.4.10
+
 You need to modify the firewall config to remove port 6900 to ensure the automated deployment will work.
 
 1. Switch to the terminal section and edit the file **/etc/firewalld/zones/public.xml** to have the following content:
@@ -136,3 +139,19 @@ Select to Deploy the Hosted Engine
 3. Review the configuration information then press **Prepare VM** to deploy the Hosted Engine virtual machine in the Prepare VM section, this can take a while
 4. When the VM has been setup press **Next** to complete the setup
 5. In the storage section the settings should be pre-populated, so you can press **Next** then **Finish Deployment**
+
+## Setup Console viewing app
+
+oVirt uses the SPICE protocol to access a hosted virtual machine.  You need to have a console viewing application installed on your system.  Details can be found [here](https://www.spice-space.org/download.html){target=_blank}
+
+### oVirt machine console on macOS
+
+Setting up the console viewer on MacOS can be a little more involved.  
+
+When using [Homebrew](){target=_blank}, issue the following commands on the command line:
+
+- brew install gtk+3
+- brew tap jeffreywildman/homebrew-virt-manager
+- brew install remoteviewer
+
+then follow the [instructions](https://rizvir.com/articles/ovirt-mac-console/){target=_blank} to setup the association of **.vv** files to the remotet-viewer application.
