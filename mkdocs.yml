@@ -52,4 +52,10 @@ nav:
   - oVirt setup: ovirt.md
   - Hosted workstation : workstation.md
   - OKD install: okd_install.md
+  - Development Environment:
+    - DevOps: devops.md
+    - Pipelines: pipelines.md
+    - Gitea: gitea.md
+  - OKD Development:
+    - Resources: okd_development.md
   - Resources: resources.md
