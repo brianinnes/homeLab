@@ -4,7 +4,7 @@ site_description: >-
 site_url: https://binnes.github.io/homeLab
 site_author: Brian Innes
 repo_name: "homeLab"
-repo_url: https://github.com/binnes/homeLab
+repo_url: https://github.com/brianinnes/homeLab
 docs_dir: docs
 site_dir: public
 edit_uri: edit/main/docs
