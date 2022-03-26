@@ -1,6 +1,6 @@
 # oVirt installation and setup
 
-<!--- cSpell:ignore passwordless OOMY hyperconverged vdsm firewalld wipefs -->
+<!--- cSpell:ignore passwordless OOMY hyperconverged vdsm firewalld wipefs remoteviewer virt jeffreywildman -->
 
 ## Install oVirt node
 
@@ -160,4 +160,4 @@ When using [Homebrew](){target=_blank}, issue the following commands on the comm
 - brew tap jeffreywildman/homebrew-virt-manager
 - brew install remoteviewer
 
-then follow the [instructions](https://rizvir.com/articles/ovirt-mac-console/){target=_blank} to setup the association of **.vv** files to the remotet-viewer application.
+then follow the [instructions](https://rizvir.com/articles/ovirt-mac-console/){target=_blank} to setup the association of **.vv** files to the remote-viewer application.

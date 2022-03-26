@@ -22,4 +22,3 @@ Below are some links and posts about OKD.  They may provide additional insight a
 
 - [OKD 4 Testing and Deployment Workshop - Videos and Additional Resources](https://www.openshift.com/blog/recap-okd-4-testing-and-deployment-workshop-videos-and-additional-resources)
 - [OKD 4 blogs on OpenShift Blog site](https://www.openshift.com/blog/tag/okd4)
-- [OKD blogs site](https://www.okd.io/blog.html)
