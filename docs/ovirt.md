@@ -47,9 +47,6 @@ you will be prompted to confirm the connection, answer **yes** then you will be 
 
 ## Configure LVM filter
 
-!!!Note
-    This step is only required in oVirt 4.4.6 and earlier - from 4.4.7 this is handled automatically by the installer
-
 By default Logical Volumes are configured to specific devices, so you need to add the device you want to use for the Gluster storage.
 
 Using the terminal section in the cockpit web ui, edit file **/etc/lvm/lvm.conf** and search for a line the starts **filter =**, not lines starting with **#** are comments.

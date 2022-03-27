@@ -1,7 +1,7 @@
 site_name: Home Lab
 site_description: >-
   How to create your own home or office Lab environment to explore Red Hat OpenShift using oVirt and OKD
-site_url: https://binnes.github.io/homeLab
+site_url: https://brianinnes.github.io/homeLab
 site_author: Brian Innes
 repo_name: "homeLab"
 repo_url: https://github.com/brianinnes/homeLab
@@ -49,6 +49,7 @@ nav:
   - Home: index.md
   - Overview: overview.md
   - Preparing: preparation.md
+  - My setup : my-setup.md
   - oVirt setup: ovirt.md
   - Hosted workstation : workstation.md
   - OKD install: okd_install.md

@@ -1,8 +1,8 @@
 [filtering]
 checkextern=1
 ignore=
-  ^https://github.com/binnes/homeLab
-  ^https://binnes.github.io/homeLab
+  ^https://github.com/brianinnes/homeLab
+  ^https://brianinnes.github.io/homeLab
   xml.gz$
   ^https://ccp-ui.csplab.intranet.ibm.com
   ^https://ccp-ui.apps.labprod.ocp.csplab.local

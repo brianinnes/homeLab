@@ -20,7 +20,10 @@ To help with the installation here is a list of information you will need during
 | IP address for the Ingress for the OKD cluster | The IP address on your network you previously allocated for the OKD Cluster Ingress |
 | OKD Cluster base domain | The base domain your cluster will use for all exposed endpoints - This cannot be changed after installation |
 | Cluster Name | The name for the OKD cluster, this will be prepended to the base domain to form the URLs for application and API endpoints. (e.g. ```api.<cluster name>.<base domain>```) |
-| Enter a valid Red Hat pull secret | This is the pull secret to the Red Hat image registries where Open Shift images are stored.  You don't need to use a valid pull secret as OKD does not need access to the registries, but providing a valid secret will allow Red Hat applications to be installed on the cluster.  The pull secret must pass a validation check.  A valid fake secret is ```{"auths":{"fake":{"auth":"aWQ6cGFzcwo="}}}```.  If you have a Red Hat account a valid secret can be downloaded from [here](https://cloud.redhat.com/openshift/install/pull-secret){: target=_blank}|
+| Enter a valid Red Hat pull secret | This is the pull secret to the Red Hat image registries where Open Shift images are stored.  You don't need to use a valid pull secret as OKD does not need access to the registries, but providing a valid secret will allow Red Hat applications to be installed on the cluster.  The pull secret must pass a validation check.  A valid fake secret is ```{"auths":{"fake":{"auth":"aWQ6cGFzcwo="}}}```.  If you have a Red Hat account a valid secret can be downloaded from [here](https://cloud.redhat.com/openshift/install/pull-secret){: target=_blank}.  Adding a valid pull secret will allow access to licensed Red Hat content, you need to ensure you comply with Red Hat entitlements if providing a valid secret |
+
+!!!Todo
+    Add details of the required DNS config needed to allow the OKD setup to work
 
 ## Install OKD
 
@@ -110,6 +113,14 @@ Alternatively you can download one of the [nightly builds](https://amd64.origin.
 
 !!!Warning
     It is important that you keep the install directory after the installation has finished, as if you ever shut your cluster down for a length of time, then the certificates used within the system may expire whilst the system is down.  The only way to access the cluster to renew the certificates is with the auth credentials contained within the install directory.  You also need the install directory if you want to uninstall the cluster.
+
+!!!Info
+    If you have a slower network connection it is possible that the install will timeout.  You can continue the install process if the install times out.  Depending on the place where it timeouts you can continue:
+
+    - Timeout during bootstrap : `./openshift-install wait-for bootstrap-complete`
+        - once bootstrap completes run command : `./openshift-install destroy bootstrap` to clean up the bootstrap vm
+        - the run the command to wait for the remaining install `./openshift-install wait-for install-complete`
+    - Timeout after bootstrap completes, waiting for cluster to initialize run command : `./openshift-install wait-for install-complete`
 
 ## Connecting to the cluster
 
