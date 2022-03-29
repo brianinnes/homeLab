@@ -1,6 +1,6 @@
 # My setup
 
-<!--- cSpell:ignore dnsmasq NVME Hyperconverged homelab homeLab -->
+<!--- cSpell:ignore dnsmasq NVME Hyperconverged homelab homeLab raspihome virt -->
 
 This page details the setup for my home lab
 
