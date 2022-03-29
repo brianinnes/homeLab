@@ -1,10 +1,10 @@
 # My setup
 
-<!--- cSpell:ignore dnsmasq NVME Hyperconverged -->
+<!--- cSpell:ignore dnsmasq NVME Hyperconverged homelab homeLab -->
 
 This page details the setup for my home lab
 
-![Homelab diagram](images/homelab.png){style="width: 80%" .center}
+![Home lab diagram](images/homelab.png){style="width: 80%" .center}
 
 ## Hardware
 
