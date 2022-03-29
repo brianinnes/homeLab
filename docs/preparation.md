@@ -35,6 +35,6 @@ To run oVirt and OKD you need some local network infrastructure to provide:
 - DNS name resolution
 
 - each physical host you will use to host the oVirt nodes will need an IP address
-- the oVirt virtualization manager VM will need an IP address
-- OKD needs 2 IP addresses allocated for the API endpoint and the cluster ingress
-- the local network DNS resolution must be configured to resolve certain FQDN (Fully Qualified Domain Name)
+- the oVirt virtualization manager VM will need an IP address, with DNS resolution on the local network
+- OKD needs 2 IP addresses allocated for the API endpoint and the cluster ingress, again DNS resolution is needed for the 2 IP addresses
+- the local network DNS resolution must be configured to resolve certain FQDN (Fully Qualified Domain Name).  This includes resolving all names matching  `*.apps.<cluster-name>.<base-domain>`, which will resolve all deployed application on OKD exposed using the ingress.

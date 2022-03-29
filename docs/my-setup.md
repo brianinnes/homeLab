@@ -4,6 +4,8 @@
 
 This page details the setup for my home lab
 
+![Homelab diagram](images/homelab.png){style="width: 80%" .center}
+
 ## Hardware
 
 There are 2 systems the make up the lab hardware:
@@ -36,3 +38,10 @@ Many Internet Service Providers provide a *home hub* that will suffice for most 
 The z840 is setup as a single node oVirt and Gluster Hyperconverged system.  The LSI RAID volumes are used exclusively as gluster volumes, so oVirt and OKD have access to both fast SSD and slower HD storage.
 
 The systems are connected with 1GB networking using unmanaged switches and cat 6 cables.
+
+## Network setup
+
+I run the lab environment on my home ethernet network, which is not exposed on the internet, so all the name resolution is entirely within my local LAN, so I've not purchased any domain for the home lab.
+
+- Base domain name : lab.home
+- OKD Cluster name : okd
