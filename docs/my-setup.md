@@ -45,3 +45,21 @@ I run the lab environment on my home ethernet network, which is not exposed on t
 
 - Base domain name : lab.home
 - OKD Cluster name : okd
+- Network
+    - IP Network : 192.168.1.x
+    - Netmask : 24 / 255.255.255.0
+    - Gateway : 192.168.1.1
+    - DNS : 192.168.1.10
+    - DHCP range : 192.168.1.100 - 192.168.1.249
+- OKD Cluster name : okd
+
+### DNS mappings on local network
+
+| IP | Hostnames | Comments |
+| ------------ | ---------------------- | ----------- |
+| 192.168.1.10 | raspihome raspihome.lab.home | Raspberry pi host |
+| 192.168.1.11 | z840 z840.lab.home | z840 host |
+| 192.168.1.15 | virt virt.lab.home | oVirt hosted engine |
+| 192.168.1.16 | workstation workstation.lab.home | Fedora workstation |
+| 192.168.1.17 | api api.okd.lab.home | OKD api endpoint |
+| 192.168.1.18 | *.apps.okd.lab.home | OKD apps ingress endpoint |

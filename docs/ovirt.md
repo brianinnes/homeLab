@@ -16,7 +16,7 @@
     - you need to keep a disk or partition free for Gluster to use (this was discussed in the [preparation](./preparation.md){: target=_blank} section)
 4. Enter a root password
 5. Set the TimeZone
-6. Enter the Network and Host name section
+6. Enter the Network and Host name section (ovirt host details - **z840.home.lab** in my setup)
     - select **Configure** to configure the network interface
     - In the IPv4 tab select **Manual** configuration then select **Add** to enter the configuration - this should match what is in your DNS configuration.  Press **Save** to store the IP configuration
     - Click the toggle switch to enable the Ethernet interface
@@ -134,7 +134,7 @@ You need to modify the firewall config to remove port 6900 to ensure the automat
 Select to Deploy the Hosted Engine
 
 1. In the VM Settings section enter:
-    - the fully qualified host name for the hosted engine
+    - the fully qualified host name for the hosted engine (**virt.home.lab** in my setup)
     - switch to static Network Configuration and set the IP address to the value matching your hostname in your DNS, the gateway address and DNS server address
     - enter the root password you want to set for the hosted engine operating system
     - select **Next** to move to Engine section
