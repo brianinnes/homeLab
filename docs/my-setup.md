@@ -55,7 +55,7 @@ I run the lab environment on my home ethernet network, which is not exposed on t
 
 ### DNS mappings on local network
 
-| IP | Hostnames | Comments |
+| IP | Hostnames | Description |
 | ------------ | ---------------------- | ----------- |
 | 192.168.1.10 | raspihome raspihome.lab.home | Raspberry pi host |
 | 192.168.1.11 | z840 z840.lab.home | z840 host |
