@@ -57,9 +57,4 @@ nav:
     - DevOps: devops.md
     - Pipelines: pipelines.md
     - Gitea: gitea.md
-  - OKD Development:
-    - Overview: okd_tech_docs/index.md
-    - Modifying OKD: okd_tech_docs/modifying_okd.md
-    - Operators: okd_tech_docs/operators.md
-    - Release: okd_tech_docs/release.md
   - Resources: resources.md
