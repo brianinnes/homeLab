@@ -1,5 +1,7 @@
 # Making changes to OKD
 
+<!--- cSpell:ignore podman Dockerfiles -->
+
 The source code for OKD is available on [github](https://github.com/openshift){target=_blank}.  OKD is made up of many components bundled into a release.  You can find the exact commit for each component included in a release using the `oc adm release info` command with the `--commit-urls` option, as outlined in the [overview](./index.md#okd-releases) section.
 
 To make a change to OKD you need to:
@@ -12,15 +14,15 @@ To make a change to OKD you need to:
 
 ## Building images
 
-Most component repositories contain a Dockerfile, so building the image is as simple as `podman build` or `docker build` depending on your containe tool of choice.
+Most component repositories contain a Dockerfile, so building the image is as simple as `podman build` or `docker build` depending on your container tool of choice.
 
 Some component repositories contain a Makefile, so building the image can be done using the Makefile, typically with `make build`
 
 !!!Info
-    Unfortunatelty many of the components have Dockerfiles that use RedHat internal build images from *registry.ci.openshift.org* which requires authorization.  E.g. console-operator uses *registry.ci.openshift.org/ocp/builder:rhel-8-golang-1.17-openshift-4.10* as the builder
+    Unfortunately many of the components have Dockerfiles that use RedHat internal build images from *registry.ci.openshift.org* which requires authorization.  E.g. console-operator uses *registry.ci.openshift.org/ocp/builder:rhel-8-golang-1.17-openshift-4.10* as the builder
 
 !!!Question
-    Are the images in *registry.ci.openshift.org* available publically?
+    Are the images in *registry.ci.openshift.org* available publicly?
     Can [this go-toolset](https://catalog.redhat.com/software/containers/rhel8/go-toolset/5b9c810add19c70b45cbd666){target=_blank} be used instead?
 
 !!!Todo
@@ -48,7 +50,7 @@ The **Cluster Version Operator** watches the deployments and images related to t
 oc scale --replicas=0 deployment/cluster-version-operator -n openshift-cluster-version
 ```
 
-Some images, such as the **Cluster Cloud Contraoller Manager Operator** and the **Machine API Operator** need additional steps to be able to make changes, but these typically have a **docs** folder containing additional information about how to make changes to these images.
+Some images, such as the **Cluster Cloud Controller Manager Operator** and the **Machine API Operator** need additional steps to be able to make changes, but these typically have a **docs** folder containing additional information about how to make changes to these images.
 
 ### Create custom release
 

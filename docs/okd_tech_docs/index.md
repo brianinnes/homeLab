@@ -1,5 +1,7 @@
 # OKD Technical Documentation
 
+<!--- cSpell:ignore pullspecs -->
+
 This section of the documentation is for developers that want to customize OKD.
 
 The section will cover:
