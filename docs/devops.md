@@ -8,5 +8,6 @@ After setting up OKD cluster additional components will be installed to create a
 - GitOps (ArgoCD)
 - Gitea (Source control)
 - Project Quay (Container Repository)
+- Noobaa (Object storage)
 - Web Terminal
 - Che (CodeReady Workspaces)
