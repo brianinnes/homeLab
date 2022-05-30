@@ -1,6 +1,6 @@
 # DevOps environment
 
-<!--- cSpell:ignore  ArgoCD Gitea tekton -->
+<!--- cSpell:ignore  ArgoCD Gitea tekton Noobaa -->
 
 After setting up OKD cluster additional components will be installed to create a Cloud Native Development environment.  The components that will be installed are:
 

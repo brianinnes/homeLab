@@ -19,7 +19,10 @@ The documentation also assumes that oVirt will be installed over multiple physic
 
 However, for a Home Lab environment the oVirt environment can be configured to over commit memory, to allow a cluster to be setup with a minimum of 56 GiB memory, but then you will be constrained on what you can deploy into the cluster.
 
-There is also the option to not deploy a fault tolerant OKD cluster and reduce the number of Master nodes, details of how to create a single node installation can be found in the [OKD documentation](https://docs.okd.io/latest/installing/installing_sno/install-sno-preparing-to-install-sno.html){target=_blank}, which needs 8 vCPU cores and 32GB RAM.  An alternate option may be to use [Code-Ready Containers](https://www.okd.io/crc/){target=_blank}
+!!!todo
+    When SNO docs is available fix 
+
+There is also the option to not deploy a fault tolerant OKD cluster and reduce the number of Master nodes, details of how to create a single node installation can be found in the `[OKD documentation](https://docs.okd.io/latest/installing/installing_sno/install-sno-preparing-to-install-sno.html){target=_blank}`, which needs 8 vCPU cores and 32GB RAM.  An alternate option may be to use [Code-Ready Containers](https://www.okd.io/crc/){target=_blank}
 
 ### Storage setup
 
