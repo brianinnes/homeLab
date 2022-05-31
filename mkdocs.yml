@@ -54,7 +54,10 @@ nav:
   - Hosted workstation : workstation.md
   - OKD install: okd_install.md
   - Development Environment:
-    - DevOps: devops.md
-    - Pipelines: pipelines.md
-    - Gitea: gitea.md
+    - DevOps: devops/index.md
+    - Object Storage : devops/objectStorage.md
+    - Container Registry : devops/registry.md
+    - ArgoCD : devops/argocd.md
+    - Pipelines: devops/pipelines.md
+    - Gitea: devops/gitea.md
   - Resources: resources.md
