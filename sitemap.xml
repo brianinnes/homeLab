@@ -1,33 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://binnes.github.io/homeLab/</loc>
-         <lastmod>2021-07-08</lastmod>
+         <loc>https://brianinnes.github.io/homeLab/</loc>
+         <lastmod>2022-07-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://binnes.github.io/homeLab/okd_install/</loc>
-         <lastmod>2021-07-08</lastmod>
+         <loc>https://brianinnes.github.io/homeLab/my-setup/</loc>
+         <lastmod>2022-07-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://binnes.github.io/homeLab/overview/</loc>
-         <lastmod>2021-07-08</lastmod>
+         <loc>https://brianinnes.github.io/homeLab/okd_install/</loc>
+         <lastmod>2022-07-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://binnes.github.io/homeLab/ovirt/</loc>
-         <lastmod>2021-07-08</lastmod>
+         <loc>https://brianinnes.github.io/homeLab/overview/</loc>
+         <lastmod>2022-07-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://binnes.github.io/homeLab/preparation/</loc>
-         <lastmod>2021-07-08</lastmod>
+         <loc>https://brianinnes.github.io/homeLab/ovirt/</loc>
+         <lastmod>2022-07-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://binnes.github.io/homeLab/resources/</loc>
-         <lastmod>2021-07-08</lastmod>
+         <loc>https://brianinnes.github.io/homeLab/preparation/</loc>
+         <lastmod>2022-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://brianinnes.github.io/homeLab/resources/</loc>
+         <lastmod>2022-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://brianinnes.github.io/homeLab/workstation/</loc>
+         <lastmod>2022-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://brianinnes.github.io/homeLab/devops/</loc>
+         <lastmod>2022-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://brianinnes.github.io/homeLab/devops/argocd/</loc>
+         <lastmod>2022-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://brianinnes.github.io/homeLab/devops/gitea/</loc>
+         <lastmod>2022-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://brianinnes.github.io/homeLab/devops/objectStorage/</loc>
+         <lastmod>2022-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://brianinnes.github.io/homeLab/devops/pipelines/</loc>
+         <lastmod>2022-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://brianinnes.github.io/homeLab/devops/registry/</loc>
+         <lastmod>2022-07-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
