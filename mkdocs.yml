@@ -60,4 +60,6 @@ nav:
     - ArgoCD : devops/argocd.md
     - Pipelines: devops/pipelines.md
     - Gitea: devops/gitea.md
+  - Full Stack Development:
+    - Nuxt 3 : full-stack/nuxt3.md
   - Resources: resources.md
