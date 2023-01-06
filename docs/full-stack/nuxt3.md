@@ -1,6 +1,6 @@
 # Nuxt 3 - Vue based Web Framework
 
-<!--- cSpell:ignore Nuxt pinia vuetify  -->
+<!--- cSpell:ignore Nuxt pinia vuetify nuxi sass vueuse -->
 
 [Nuxt](https://nuxt.com){: target=_blank} is a web framework build on Vue.js.  It provides a number of features which speeds up development over standard [Vue.js](https://vuejs.org){: target=blank}.
 
@@ -27,7 +27,7 @@ Technology used for full stack development
 
 1. `npm install vuetify@next @mdi/font sass`
 2. start code editor (`code ,`)
-3. create a foled in the project root named **plugins**
+3. create a folder in the project root named **plugins**
 4. create a file in the plugins folder named **vuetify.ts** with the following content:
 
     ```ts
@@ -45,7 +45,7 @@ Technology used for full stack development
     nuxtApp.vueApp.use(vuetify)
     })
     ```
-5. modify the **nuxr.config.ts** file to integrated Vuetify into the Nuxt build process, update the **defineNuxtConfig** object definition so it looks like:
+5. modify the **nuxi.config.ts** file to integrated Vuetify into the Nuxt build process, update the **defineNuxtConfig** object definition so it looks like:
 
     ```ts
     export default defineNuxtConfig({
@@ -67,14 +67,13 @@ Technology used for full stack development
 ## Add VueUse utilities
 
 1. `npm i -D @vueuse/nuxt`
-2. Edit the **nuxt.config.ts** file and add the @vueuse/nuxt modules:
+2. Edit the **nuxt.config.ts** file and add the @vueuse/nuxt module:
 
     ```ts
     export default defineNuxtConfig({
         modules: [
-            '@vueuse/nuxt',
-            ...
-        ]
+            '@vueuse/nuxt'
+        ],
         ...
     })
     ```
