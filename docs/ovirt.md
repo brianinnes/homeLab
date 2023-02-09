@@ -45,7 +45,7 @@ ssh-copy-id root@<host-address>
 
 you will be prompted to confirm the connection, answer **yes** then you will be prompted for the root password, which you entered in step 4 of the previous section.
 
-## Configure LVM filter
+## Configure LVM filter (not required for oVirt 4.5.4 and later)
 
 By default Logical Volumes are configured to specific devices, so you need to add the device you want to use for the Gluster storage.
 
@@ -65,6 +65,16 @@ Save the modified lvm.conf file
     If you plan to use an entire disk for GlusterFS, then it is important that the disk is not partitioned, so if it has previously been used and has a partition table on it, then use the **Terminal** section of the cockpit interface to clear the device.  E.g. if you will be using the disk **/dev/sdb** for gluster, then wipe the disk using command ```wipefs -a -f /dev/sdb```.  This will erase the disk.
 
 ## Setup the hyperconverged oVirt Hosted Engine and Gluster storage
+
+!!!Note
+    There is a mismatch in Ansible versions so fixup is needed before running setup wizard on oVirt 4.5.4.  See [this git issue](https://github.com/gluster/gluster-ansible-infra/issues/135){target=_blank}.  You need to run the following in the terminal panel of your host machine:
+    
+    ```shell
+    sed -i 's/output | to_json/output/' /etc/ansible/roles/gluster.infra/roles/backend_setup/tasks/get_vg_groupings.yml
+    sed -i 's/output | to_json/output/' /etc/ansible/roles/gluster.infra/roles/backend_setup/tasks/thick_lv_create.yml
+    sed -i 's/output | to_json/output/' /etc/ansible/roles/gluster.infra/roles/backend_setup/tasks/thin_pool_create.yml
+    sed -i 's/output | to_json/output/' /etc/ansible/roles/gluster.infra/roles/backend_setup/tasks/thin_volume_create.yml
+    ```
 
 The hyperconverged Hosted Engine and Gluster storage can be installed using the cockpit web console (```http://<host-address>:9090```).
 
