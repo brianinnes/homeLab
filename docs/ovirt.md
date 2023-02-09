@@ -1,6 +1,6 @@
 # oVirt installation and setup
 
-<!--- cSpell:ignore passwordless OOMY hyperconverged vdsm firewalld wipefs remoteviewer virt jeffreywildman -->
+<!--- cSpell:ignore passwordless OOMY hyperconverged vdsm firewalld wipefs remoteviewer virt jeffreywildman fixup -->
 
 ## Install oVirt node
 
